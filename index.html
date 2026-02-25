@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Minha Garota 💜</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Alex Brush', cursive;
+    background: linear-gradient(180deg, #0f001a, #1e0033, #2d0050);
+    color: #f8eaff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* 🌸 Pétalas */
+.petal {
+    position: fixed;
+    top: -10px;
+    animation: fall linear infinite;
+    color: #d580ff;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* ✨ Estrelas */
+.star {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: blink 2s infinite alternate;
+}
+
+@keyframes blink {
+    from { opacity: 0.2; }
+    to { opacity: 1; }
+}
+
+/* 💗 Corações */
+.heart {
+    position: fixed;
+    font-size: 20px;
+    animation: floatUp 2s ease-out forwards;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+.container {
+    padding: 80px 20px 40px 20px;
+}
+
+h1 {
+    font-size: 4em;
+    color: #f5d0ff;
+    text-shadow: 0 0 25px rgba(255,255,255,0.8);
+}
+
+h2 {
+    font-size: 3em;
+    color: #f5d0ff;
+    margin-top: 40px;
+}
+
+.section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+    font-size: 2em;
+    background: rgba(0,0,0,0.5);
+    border-radius: 20px;
+}
+
+.counter {
+    font-size: 2.2em;
+    margin-top: 40px;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.button {
+    margin-top: 40px;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    background: #b84dff;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #d580ff;
+    transform: scale(1.1);
+}
+
+.hiddenMessage {
+    display: none;
+    margin-top: 30px;
+    font-size: 2em;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Para Minha Garota 💜</h1>
+    <p style="font-size:2em;">
+        Me encanto pela sua beleza da mesma forma que as daturas sagradas se fascinam pelo brilho da lua.
+    </p>
+</div>
+
+<div class="section">
+
+<h2>Um pouco do que vejo quando olho para ti</h2>
+
+<p>
+Se o céu ousasse invejar algo da Terra,<br>
+seriam teus olhos — dois astros serenos,<br>
+que brilham como a lua cheia na noite,<br>
+guardando mistérios que só o amor entende.
+</p>
+
+<p>
+Em teu olhar encontro paz e infinito,<br>
+encontro abrigo e doce emoção;<br>
+pois quem encara tamanha beleza<br>
+rende-se inteiro, sem condição.
+</p>
+
+<p>
+E teus cabelos, como noite suave,<br>
+dançam livres ao toque do vento;<br>
+fios que parecem carregar estrelas<br>
+e me prendem em eterno encantamento.
+</p>
+
+<p>
+Ó Minha Princesa, se a lua tivesse nome,<br>
+chamaria pelo teu ao brilhar;<br>
+pois nem o céu em sua grandeza<br>
+supera o amor que vi em ti, meu amor.
+</p>
+
+<div class="counter">
+💜 Estamos juntos há:<br>
+<span id="contador"></span>
+</div>
+
+<br>
+
+<button class="button" onclick="mostrarMensagem()">
+Clique aqui 💌
+</button>
+
+<div class="hiddenMessage" id="mensagem">
+O teu abraço é meu melhor abrigo do mundo inteiro Eu te amo muito Minha Pretinha 💜✨
+</div>
