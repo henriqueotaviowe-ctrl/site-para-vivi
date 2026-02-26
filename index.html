@@ -5,59 +5,77 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Para Minha Garota 💜</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 body {
     margin: 0;
-    font-family: 'Alex Brush', cursive;
-    background: linear-gradient(180deg, #0f001a, #1e0033, #2d0050);
+    font-family: 'Cormorant Garamond', serif;
+    background: radial-gradient(circle at bottom, #1a002b 0%, #0b0015 70%);
     color: #f8eaff;
     text-align: center;
     overflow-x: hidden;
 }
 
-/* 🌸 Pétalas */
+/* 🌕 LUA */
+.moon {
+    position: fixed;
+    top: 8%;
+    right: 10%;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle at 30% 30%, #ffffff, #dcdcdc 60%, #bfbfbf 100%);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 40px rgba(255,255,255,0.8),
+        0 0 80px rgba(255,255,255,0.5),
+        0 0 120px rgba(200,200,255,0.3);
+    animation: moonFloat 6s ease-in-out infinite alternate;
+    z-index: -1;
+}
+
+@keyframes moonFloat {
+    from { transform: translateY(0px); }
+    to { transform: translateY(15px); }
+}
+
+/* ☁️ Nuvens */
+.cloud {
+    position: fixed;
+    top: 12%;
+    width: 300px;
+    height: 100px;
+    background: rgba(255,255,255,0.05);
+    filter: blur(20px);
+    border-radius: 50%;
+    animation: cloudMove 40s linear infinite;
+    z-index: -1;
+}
+
+@keyframes cloudMove {
+    from { transform: translateX(-400px); }
+    to { transform: translateX(120vw); }
+}
+
+/* 🌸 PÉTALAS */
 .petal {
     position: fixed;
     top: -10px;
-    animation: fall linear infinite;
     color: #d580ff;
+    font-size: 22px;
+    animation: fall linear forwards;
+    z-index: -1;
 }
 
 @keyframes fall {
     to {
         transform: translateY(110vh) rotate(360deg);
+        opacity: 0.8;
     }
 }
 
-/* ✨ Estrelas */
-.star {
-    position: fixed;
-    width: 2px;
-    height: 2px;
-    background: white;
-    border-radius: 50%;
-    animation: blink 2s infinite alternate;
-}
-
-@keyframes blink {
-    from { opacity: 0.2; }
-    to { opacity: 1; }
-}
-
-/* 💗 Corações */
-.heart {
-    position: fixed;
-    font-size: 20px;
-    animation: floatUp 2s ease-out forwards;
-}
-
-@keyframes floatUp {
-    to {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
+h1, h2 {
+    font-family: 'Playfair Display', serif;
 }
 
 .container {
@@ -65,13 +83,13 @@ body {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 3.5em;
     color: #f5d0ff;
-    text-shadow: 0 0 25px rgba(255,255,255,0.8);
+    text-shadow: 0 0 20px rgba(255,255,255,0.7);
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 2.3em;
     color: #f5d0ff;
     margin-top: 40px;
 }
@@ -80,14 +98,14 @@ h2 {
     padding: 40px 20px;
     max-width: 800px;
     margin: auto;
-    line-height: 1.6;
-    font-size: 2em;
+    line-height: 1.8;
+    font-size: 1.5em;
     background: rgba(0,0,0,0.5);
     border-radius: 20px;
 }
 
 .counter {
-    font-size: 2.2em;
+    font-size: 1.8em;
     margin-top: 40px;
     background: rgba(0,0,0,0.6);
     padding: 20px;
@@ -98,7 +116,7 @@ h2 {
 .button {
     margin-top: 40px;
     padding: 15px 30px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     background: #b84dff;
     color: white;
     border: none;
@@ -115,63 +133,166 @@ h2 {
 .hiddenMessage {
     display: none;
     margin-top: 30px;
-    font-size: 2em;
+    font-size: 1.6em;
+}
+
+/* ✨ Estrelas */
+.star {
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: blink 2s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes blink {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+/* 💜 Corações */
+.heart {
+    position: fixed;
+    font-size: 20px;
+    animation: floatUp 2s ease-out forwards;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<div class="moon"></div>
+<div class="cloud"></div>
+
 <div class="container">
     <h1>Para Minha Garota 💜</h1>
-    <p style="font-size:2em;">
+    <p style="font-size:1.6em;">
         Me encanto pela sua beleza da mesma forma que as daturas sagradas se fascinam pelo brilho da lua.
     </p>
 </div>
 
 <div class="section">
 
-<h2>Um pouco do que vejo quando olho para ti</h2>
+<h2>Um pouco sobre como vejo você</h2>
 
 <p>
-Se o céu ousasse invejar algo da Terra,<br>
-seriam teus olhos — dois astros serenos,<br>
-que brilham como a lua cheia na noite,<br>
-guardando mistérios que só o amor entende.
-</p>
+Posso dizer, com todas as minhas forças, que nunca amei alguém como amo você.
+A fé e a confiança que depositei em ti em tão pouco tempo são algo raro — algo que só você recebeu dentre todas as pessoas que já passaram pela minha vida.
 
-<p>
-Em teu olhar encontro paz e infinito,<br>
-encontro abrigo e doce emoção;<br>
-pois quem encara tamanha beleza<br>
-rende-se inteiro, sem condição.
-</p>
+Você chegou como uma chuva calma ao amanhecer, silenciosa, serena, mas capaz de transformar tudo ao redor.
+É como uma brisa suave que toca a alma, como o calor que aquece meu coração nos dias frios.
 
-<p>
-E teus cabelos, como noite suave,<br>
-dançam livres ao toque do vento;<br>
-fios que parecem carregar estrelas<br>
-e me prendem em eterno encantamento.
-</p>
+Você é a chama que arde viva dentro de mim — não uma chama passageira, mas um fogo constante, intenso e verdadeiro.
+O que sinto por você não é raso, não é momentâneo.
+É profundo, é firme, é sincero.
 
-<p>
-Ó Minha Princesa, se a lua tivesse nome,<br>
-chamaria pelo teu ao brilhar;<br>
-pois nem o céu em sua grandeza<br>
-supera o amor que vi em ti, meu amor.
+E no brilho do teu olhar eu encontro a certeza de que esse sentimento é recíproco.
+
+Contigo, eu quero enfrentar as adversidades,
+segurar tua mão quando o mundo parecer pesado,
+ser abrigo quando a tempestade vier.
+
+E, se Deus permitir, iremos muito além deste namoro.
+Porque quando há amor, fé e vontade de permanecer,
+basta que eu e você escolhamos, todos os dias,
+ser felizes juntos. 💜✨
 </p>
 
 <div class="counter">
 💜 Estamos juntos há:<br>
-<span id="contador"></span>
+<span id="contador">Carregando...</span>
 </div>
 
 <br>
 
-<button class="button" onclick="mostrarMensagem()">
+<button class="button" id="botao">
 Clique aqui 💌
 </button>
 
 <div class="hiddenMessage" id="mensagem">
-O teu abraço é meu melhor abrigo do mundo inteiro Eu te amo muito Minha Pretinha 💜✨
+Eu te amo Minha Pretinha 💜✨
 </div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const dataInicio = new Date(2026, 1, 7, 0, 0, 0);
+
+    function atualizarContador() {
+        const agora = new Date();
+        const diferenca = agora - dataInicio;
+
+        if (diferenca < 0) {
+            document.getElementById("contador").textContent =
+                "Nossa história começa em breve 💜";
+            return;
+        }
+
+        const totalSegundos = Math.floor(diferenca / 1000);
+
+        const dias = Math.floor(totalSegundos / 86400);
+        const horas = Math.floor((totalSegundos % 86400) / 3600);
+        const minutos = Math.floor((totalSegundos % 3600) / 60);
+        const segundos = totalSegundos % 60;
+
+        document.getElementById("contador").textContent =
+            dias + " dias, " +
+            horas + " horas, " +
+            minutos + " minutos e " +
+            segundos + " segundos 💜";
+    }
+
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+
+    document.getElementById("botao").addEventListener("click", function () {
+        const mensagem = document.getElementById("mensagem");
+        mensagem.style.display = "block";
+
+        for (let i = 0; i < 10; i++) {
+            let heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "💜";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.top = "70%";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 2000);
+        }
+    });
+
+    // 🌸 Pétalas contínuas
+    setInterval(() => {
+        let petal = document.createElement("div");
+        petal.classList.add("petal");
+        petal.innerHTML = "✿";
+        petal.style.left = Math.random() * 100 + "vw";
+        petal.style.animationDuration = (Math.random() * 4 + 4) + "s";
+        document.body.appendChild(petal);
+        setTimeout(() => petal.remove(), 8000);
+    }, 400);
+
+    // ✨ Estrelas
+    for (let i = 0; i < 60; i++) {
+        let star = document.createElement("div");
+        star.classList.add("star");
+        star.style.left = Math.random() * 100 + "vw";
+        star.style.top = Math.random() * 100 + "vh";
+        document.body.appendChild(star);
+    }
+
+});
+</script>
+
+</body>
+</html>
